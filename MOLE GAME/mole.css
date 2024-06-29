@@ -1,0 +1,201 @@
+@font-face {
+  font-family: "SuperMario256";
+  src: url("./font/SuperMario256.ttf");
+}
+
+body {
+  text-align: center;
+  background-image: url("./ASSETS/mario-bg.jpg");
+  background-size: cover;
+  font-family: "SuperMario256", sans-serif;
+}
+
+h1 {
+  font-size: 3vw;
+}
+
+h2 {
+  margin: 0;
+  padding: 0;
+  font-size: 2.5vw;
+}
+
+#board {
+  height: 540px;
+  width: 540px;
+  background-image: url("./ASSETS/soil.png");
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 24px;
+  border: 3px solid white;
+}
+
+#board div {
+  height: 180px;
+  width: 180px;
+  background-image: url("./ASSETS/pipe.png");
+  background-size: cover;
+}
+
+#board div img {
+  height: 100px;
+  width: 100px;
+  animation: ani 0.2s linear;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+}
+
+@keyframes ani {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+#over {
+  height: 220px;
+  width: 600px;
+  border-radius: 25px;
+  border: 3px solid rgba(255, 255, 255, 0.508);
+  backdrop-filter: blur(10px);
+  text-align: center;
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px,
+    rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px,
+    rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+  display: none;
+  margin: 0 auto;
+}
+
+#over #h1 {
+  font-size: 3.2vw;
+}
+
+#over #h2 {
+  font-size: 1.5vw;
+}
+
+#over #btn1 {
+  height: 34px;
+  width: 140px;
+  margin-top: 22px;
+  border-radius: 60px;
+  font-size: 2vw;
+  border: 2px solid white;
+  font-family: "SuperMario256", sans-serif;
+  background-color: transparent;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+
+@media (max-width : 600px) {
+
+    body {
+        height: 100vh;
+        text-align: center;
+        background-image: url("./ASSETS/mario-bg.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        font-family: "SuperMario256", sans-serif;
+        position: relative;
+        z-index: -1;
+      }
+      
+      h1 {
+        font-size: 3vw;
+      }
+      
+      h2 {
+        margin: 0;
+        padding: 0;
+        font-size: 2.5vw;
+      }
+      
+      #board {
+        height: 540px;
+        width: 340px;
+        background-image: url("./ASSETS/soil.png");
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        border-radius: 24px;
+        border: 3px solid white;
+      }
+      
+      #board div {
+        height: 110px;
+        width: 110px;
+        background-image: url("./ASSETS/pipe.png");
+        background-size: cover;
+      }
+      
+      #board div img {
+        height: 60px;
+        width: 60px;
+        animation: ani 0.2s linear;
+        user-select: none;
+        -moz-user-select: none;
+        -webkit-user-drag: none;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+      }
+      
+      @keyframes ani {
+        from {
+          transform: translateY(20px);
+          opacity: 0;
+        }
+        to {
+          transform: translateY(0px);
+          opacity: 1;
+        }
+      }
+      
+      #over {
+        height: 120px;
+        width: 300px;
+        border-radius: 25px;
+        border: 3px solid rgba(255, 255, 255, 0.508);
+        backdrop-filter: blur(10px);
+        text-align: center;
+        box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px,
+          rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px,
+          rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+        display: none;
+        /* margin: 0 auto; */
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50% , -50%);
+      }
+      
+      #over #h1 {
+        font-size: 3.2vw;
+      }
+      
+      #over #h2 {
+        font-size: 1.5vw;
+      }
+      
+      #over #btn1 {
+        height: 14px;
+        width: 75px;
+        font-size: 2vw;
+        margin-top: 22px;
+        border-radius: 60px;
+        text-align: center;
+        border: 2px solid white;
+        font-family: "SuperMario256", sans-serif;
+        background-color: transparent;
+        box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+          rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+      }
+}
